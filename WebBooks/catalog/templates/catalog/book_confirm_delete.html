@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "base_generic.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<h1>Удаление книги</h1>
+<p> Вы уверены, что хотите удалить книгу: {{ book }}?</p>
+<form action="" method="POST">
+ {% csrf_token %}
+ <input type="submit" action="" value="Да, удалить" />
+</form>
+{% endblock %}
+</body>
+</html>

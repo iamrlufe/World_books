@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "base_generic.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% block content %}
+  <h1>Загрузить в базу</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Загрузить</button>
+  </form>
+{% endblock %}
+
+</body>
+</html>
